@@ -155,7 +155,7 @@ def main():
             
             # Build configuration for dataloader
             config = {
-                "hf_username": "yujiangw",
+                "hf_username": "cx-cmu",
                 "hf_dataset_name": dataset_config["hf_dataset_name"],
                 "train_output_dir": dataset_config["train_dir"],
                 "test_output_dir": dataset_config["test_dir"],

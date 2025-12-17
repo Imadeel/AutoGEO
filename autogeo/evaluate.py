@@ -59,7 +59,7 @@ def main():
     parser.add_argument(
         '--hf_username',
         type=str,
-        default='yujiangw',
+        default='cx-cmu',
         help='Hugging Face username'
     )
     parser.add_argument(

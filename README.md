@@ -24,7 +24,7 @@ AutoGEO automatically extracts content preference rules from generative engines 
 
 ## News
 
-- 🔥 **[2025-12-08]**: We release our code and datasets ([E-commerce](https://huggingface.co/datasets/yujiangw/E-commerce), [GEO-Bench](https://huggingface.co/datasets/yujiangw/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/yujiangw/Researchy-GEO)). Try it out!
+- 🔥 **[2025-12-08]**: We release our code and datasets ([E-commerce](https://huggingface.co/datasets/cx-cmu/E-commerce), [GEO-Bench](https://huggingface.co/datasets/cx-cmu/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/cx-cmu/Researchy-GEO)). Try it out!
 - 🔥 **[2025-10-11]**: Our paper is now available on [arXiv](https://arxiv.org/pdf/2510.11438). Check it out!
 
 ## 🚀 Installation
