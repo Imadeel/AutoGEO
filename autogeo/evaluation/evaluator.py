@@ -58,7 +58,7 @@ def process_prediction_text(text: str, length: int = 3000) -> str:
     #     return None
     # return final_text
 
-    return text
+    return text.replace("**Rewritten Source: **", "").replace("**Regenerated Source: **", "")
 
 def _process_single_question_autogeo_api(
     question_id: str,

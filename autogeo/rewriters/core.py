@@ -7,6 +7,7 @@ from typing import Optional, List, Tuple
 
 from ..config import Dataset, LLMName
 from ..utils import call_gemini
+from ..utils.hf_model import call_hf_model
 
 
 def _load_rules_from_file(
@@ -276,7 +277,8 @@ def rewrite_document(
     document: str,
     dataset: str = None,
     engine_llm: str = None,
-    rule_path: Optional[str] = None
+    rule_path: Optional[str] = None,
+    model_path: Optional[str] = None
 ) -> str:
     """Rewrite a document using AutoGEO rules.
     
@@ -285,6 +287,7 @@ def rewrite_document(
         dataset: Name of the dataset (Researchy-GEO, E-commerce, or GEO-Bench)
         engine_llm: External generative engine LLM (gemini, gpt, or claude)
         rule_path: Optional explicit rule file path
+        model_path: Path to HuggingFace model (required if model="autogeo_mini")
         
     Returns:
         Rewritten document text
@@ -313,7 +316,11 @@ You can regenerate the provided source so that it strictly adheres to the "Quali
 {rules_string}
 """.strip()
     
-    return call_gemini(user_prompt, model_name="gemini-2.5-pro")
+    # Determine which model to use
+    if model_path:
+        return call_hf_model(user_prompt, model_path=model_path)
+    else:
+        return call_gemini(user_prompt, model_name="gemini-2.5-pro")
 
 
 def get_rewrite_prompt_template(dataset: str, engine_llm: str, 
