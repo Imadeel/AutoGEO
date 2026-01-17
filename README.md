@@ -17,19 +17,21 @@ AutoGEO automatically extracts content preference rules from generative engines 
 **Three core components:**
 
 1. **Rule Extraction** — Automatically mines content preferences from GEs.
-2. **AutoGEO API** — Prompt-based GEO model using extracted rules
-3. **AutoGEO Mini** — Cost-effective GEO model trained with reinforcement learning
+2. **AutoGEO<sub>API</sub>** — Prompt-based GEO model using extracted rules
+3. **AutoGEO<sub>Mini</sub>** — Cost-effective GEO model trained with reinforcement learning
 
 **Evaluation metrics:** **GEO score** (visibility) and **GEU score** (utility)
 
 ## News
 
-- 🔥 **[2025-12-08]**: We release our code and datasets ([E-commerce](https://huggingface.co/datasets/cx-cmu/E-commerce), [GEO-Bench](https://huggingface.co/datasets/cx-cmu/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/cx-cmu/Researchy-GEO)). Try it out!
+- 🔥 **[2026-01-17]**: We release our [AutoGEO<sub>Mini</sub> Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini). Feel free to try it out!
+- 🔥 **[2026-01-17]**: We release our checkpoints ([E-commerce](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_Ecommerce), [GEO-Bench](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_GEOBench), [Researchy-GEO](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_ResearchyGEO)). 
+- 🔥 **[2025-12-08]**: We release our code and datasets ([E-commerce](https://huggingface.co/datasets/cx-cmu/E-commerce), [GEO-Bench](https://huggingface.co/datasets/cx-cmu/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/cx-cmu/Researchy-GEO)). 
 - 🔥 **[2025-10-11]**: Our paper is now available on [arXiv](https://arxiv.org/pdf/2510.11438). Check it out!
 
 ## 🚀 Installation
 
-For using AutoGEO API and rule extraction:
+For using AutoGEO<sub>API</sub> and rule extraction:
 
 ```bash
 # Clone the repository
@@ -46,7 +48,7 @@ conda activate autogeo
 nano keys.env  # Add your API keys
 ```
 
-Optional: For training AutoGEO Mini models:
+Optional: For training AutoGEO<sub>Mini</sub> models:
 
 ```bash
 # First complete Option 1, then:
@@ -54,13 +56,13 @@ conda activate autogeo
 bash install_mini.sh
 ```
 
-**⚠️ Note:** AutoGEO Mini requires:
+**⚠️ Note:** AutoGEO<sub>Mini</sub> requires:
 - CUDA-compatible GPU * 2 (A100 40GB+ recommended)
 - ~4h for SFT and ~48h for GRPO on Researchy-GEO
 
 ## ⚡ Quick Start
 
-Rewrite a document using AutoGEO API:
+Rewrite a document using AutoGEO<sub>API</sub>:
 
 ```python
 from autogeo.rewriters import rewrite_document
@@ -105,7 +107,7 @@ rewritten_text = rewrite_document(
 **Custom rules format:** JSON file with root key `"filtered_rules"`
 
 
-## 🧩 AutoGEO API
+## 🧩 AutoGEO<sub>API</sub>
 
 AutoGEO provides a unified evaluation framework for all models.
 
@@ -122,7 +124,7 @@ python -m autogeo.evaluate \
     --engine_llm gemini-2.5-flash-lite
 ```
 
-**Evaluate AutoGEO API:**
+**Evaluate AutoGEO<sub>API</sub>:**
 ```bash
 python -m autogeo.evaluate \
     --model autogeo_api \
@@ -135,7 +137,7 @@ python -m autogeo.evaluate \
 - Test subset: `--num_examples 10`
 
 
-## 🧩 AutoGEO Mini
+## 🧩 AutoGEO<sub>Mini</sub>
 
 Train a cost-effective GEO model using reinforcement learning.
 
