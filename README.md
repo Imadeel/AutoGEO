@@ -24,9 +24,9 @@ AutoGEO automatically extracts content preference rules from generative engines 
 
 ## News
 
-- 🔥 **[2026-01-17]**: We release our [AutoGEO<sub>Mini</sub> Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini). Feel free to try it out!
-- 🔥 **[2026-01-17]**: We release our checkpoints ([E-commerce](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_Ecommerce), [GEO-Bench](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_GEOBench), [Researchy-GEO](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_ResearchyGEO)). 
-- 🔥 **[2025-12-08]**: We release our code and datasets ([E-commerce](https://huggingface.co/datasets/cx-cmu/E-commerce), [GEO-Bench](https://huggingface.co/datasets/cx-cmu/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/cx-cmu/Researchy-GEO)). 
+- 🔥 **[2026-01-17]**: We have released our [AutoGEO<sub>Mini</sub> Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini). Feel free to try it out!
+- 🔥 **[2026-01-17]**: We have released our checkpoints ([E-commerce](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_Ecommerce), [GEO-Bench](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_GEOBench), [Researchy-GEO](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_ResearchyGEO)). 
+- 🔥 **[2025-12-08]**: We have released our code and datasets ([E-commerce](https://huggingface.co/datasets/cx-cmu/E-commerce), [GEO-Bench](https://huggingface.co/datasets/cx-cmu/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/cx-cmu/Researchy-GEO)). 
 - 🔥 **[2025-10-11]**: Our paper is now available on [arXiv](https://arxiv.org/pdf/2510.11438). Check it out!
 
 ## 🚀 Installation
