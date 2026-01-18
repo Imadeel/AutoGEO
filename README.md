@@ -1,6 +1,7 @@
 # AutoGEO
 
 **AutoGEO** is a framework for Automatic Generative Engine Optimization (GEO) that helps web content gain higher visibility in LLM-generated answers.
+[Project Page](https://zhongshsh.github.io/AutoGEO/) | [Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini) 
 
 📄 **Paper:** ["What Generative Search Engines Like and How to Optimize Web Content Cooperatively"](https://arxiv.org/abs/2510.11438)  
 👥 **Authors:** Yujiang Wu*, Shanshan Zhong*, Yubin Kim, Chenyan Xiong (*Equal contribution)
