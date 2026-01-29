@@ -2,7 +2,7 @@
 
 [Project Page](https://zhongshsh.github.io/AutoGEO/) | [Paper](https://arxiv.org/abs/2510.11438) | [Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini) 
 
-**AutoGEO** is a framework for Automatic Generative Engine Optimization (GEO) that helps web content gain higher visibility in LLM-generated answers.
+**AutoGEO** is a framework for Automatic Generative Engine Optimization (GEO) that helps web content gain higher visibility in LLM-generated answers. Our paper has been accepted at ICLR 2026.
 
 📄 **Paper:** "What Generative Search Engines Like and How to Optimize Web Content Cooperatively"  
 👥 **Authors:** Yujiang Wu*, Shanshan Zhong*, Yubin Kim, Chenyan Xiong (*Equal contribution)
@@ -26,6 +26,7 @@ AutoGEO automatically extracts content preference rules from generative engines 
 
 ## News
 
+- 🔥 **[2026-01-28]**: Cheers! Our paper has been accepted by ICLR' 26!
 - 🔥 **[2026-01-17]**: We have released our [AutoGEO<sub>Mini</sub> Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini). Feel free to try it out!
 - 🔥 **[2026-01-17]**: We have released our checkpoints ([E-commerce](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_Ecommerce), [GEO-Bench](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_GEOBench), [Researchy-GEO](https://huggingface.co/cx-cmu/AutoGEO_mini_Qwen1.7B_ResearchyGEO)). 
 - 🔥 **[2025-12-08]**: We have released our code and datasets ([E-commerce](https://huggingface.co/datasets/cx-cmu/E-commerce), [GEO-Bench](https://huggingface.co/datasets/cx-cmu/GEO-Bench), [Researchy-GEO](https://huggingface.co/datasets/cx-cmu/Researchy-GEO)). 
