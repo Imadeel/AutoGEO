@@ -282,6 +282,7 @@ def _normalize_scores(scores: list[float]) -> list[float]:
 def wordcountpos_reward(
     completions: list[list[dict[str, str]]],
     solution:    list[str],
+    eval_data_path: str = "../data/Researchy-GEO/RL/grpo_eval.json",
     max_workers: int = 16,
     model_name:  str = 'gemini-2.5-flash-lite',
     use_scores: Tuple[str, ...] = ('geo', 'rule', 'keypoint'),
@@ -294,9 +295,10 @@ def wordcountpos_reward(
         score_weights = {score: 1.0 for score in use_scores}
 
     try:
-        with open("../data/Researchy-GEO/RL/Researchy_grpo_eval.json", "r", encoding="utf-8") as f:
+        with open(eval_data_path, "r", encoding="utf-8") as f:
             refdata = json.load(f)
     except FileNotFoundError:
+        print(f"[REWARD_DEBUG] Eval data file not found: {eval_data_path}", flush=True)
         return [0.0] * len(completions)
 
     contents = [extract_formal_text(c[0]["content"]) for c in completions]
@@ -1013,9 +1015,21 @@ def get_soft_overlong_punishment(max_completion_len, soft_punish_cache):
 
 
 def get_reward_funcs(script_args) -> list[Callable]:
+    # Derive eval_data_path from dataset_name (e.g., "./data/Researchy-GEO/RL/grpo_input.json")
+    eval_data_path = None
+    if script_args.dataset_name:
+        dataset_dir = os.path.dirname(script_args.dataset_name)
+        eval_data_path = os.path.join(dataset_dir, "grpo_eval.json")
+
     REWARD_FUNCS_REGISTRY = {
         "len": length_reward,
-        "wordcountpos": wordcountpos_reward,
+        "wordcountpos": update_wrapper(
+            partial(
+                wordcountpos_reward,
+                eval_data_path=eval_data_path,
+            ),
+            wordcountpos_reward,
+        ) if eval_data_path else wordcountpos_reward,
         "accuracy": accuracy_reward,
         "format": format_reward,
         "reasoning_steps": reasoning_steps_reward,
