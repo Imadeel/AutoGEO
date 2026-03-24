@@ -64,7 +64,7 @@ def rule_candidate_data(
                 max_score_index = score_list.index(max(score_list))
                 auto_rule_dict[question_id]['bad_document'] = text_list[min_score_index]
                 auto_rule_dict[question_id]['good_document'] = text_list[max_score_index]
-                auto_rule_dict[question_id]['winner'] = "doc_a" if max_score_index == data[question_id].get('target_id', -1) else "doc_b"
+                auto_rule_dict[question_id]['winner'] = "doc_a"
                 auto_rule_dict[question_id]['document_a'] = text_list[max_score_index]
                 auto_rule_dict[question_id]['document_b'] = text_list[min_score_index]
                 auto_rule_dict[question_id]['good_document_content'] = text_list[max_score_index]
