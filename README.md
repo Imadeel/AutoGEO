@@ -1,6 +1,6 @@
 # AutoGEO
 
-[Project Page](https://zhongshsh.github.io/AutoGEO/) | [Paper](https://arxiv.org/abs/2510.11438) | [Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini) 
+[Project Page](https://cxcscmu.github.io/AutoGEO/) | [Paper](https://arxiv.org/abs/2510.11438) | [Demo](https://huggingface.co/spaces/cx-cmu/AutoGEO_Mini) 
 
 **AutoGEO** is a framework for Automatic Generative Engine Optimization (GEO) that helps web content gain higher visibility in LLM-generated answers. Our paper has been accepted by ICLR 2026.
 
